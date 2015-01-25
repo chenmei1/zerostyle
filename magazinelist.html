@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<title>zerostyle</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css" />
+<link href="./css/magazine.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script> 
+<script type="text/javascript"> 
+$(function () { 
+var ie6 = document.all; 
+var dv = $('#title'), st; 
+dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离 
+$(window).scroll(function () { 
+st = Math.max(document.body.scrollTop || document.documentElement.scrollTop); 
+if (st > parseInt(dv.attr('otop'))) { 
+if (ie6) {
+dv.css({ position: 'absolute', top: st }); 
+} 
+else if (dv.css('position') != 'fixed') dv.css({ 'position': 'fixed', top: 0 }); 
+} else if (dv.css('position') != 'static') dv.css({ 'position': 'static' }); 
+}); 
+}); 
+</script> 
+</head>
+<body>
+    <div id="headerwrapper">
+    	<div class="black">
+    		<p><a href="#">欢迎来到Zer0style</a><a href="#">设为首页</a></p>
+    		<div id="headright"><a href="login.html">登录</a><a href="register.html">注册</a><a href="changeinfo.html">收藏夹</a><a href="teacher.html">签约导师</a><a href="aboutus.html">联系我们</a></div>
+        </div>
+    	<div id="header">
+    		<img src="./image/logo.png" />
+    		<input type="text" id="soso" value=""/>
+    		<input type="buttton" id="search" value="搜索">
+    		<p>热门搜索&nbsp;:&nbsp;<a href="">屌丝逆袭</a><a class="active" href="">美女巨变</a><a href="">欧巴</a><a href="">暖男</a><a class="active" href="">Fashion</a><a href="">流行色</a><a href="">时尚大咖</a><a href="">国际品牌</a></p>
+    	</div><!--end of header-->
+    	<div id="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="teacher.html">时尚导师</a></li>
+                <li><a href="case.html">经典案例</a></li>
+                <li><a  class="activ" href="magazinelist.html">时尚风范</a></li>
+            </ul>
+    	</div><!--end of nav-->
+    </div><!--end of headerwrapper-->
+    <div id="wrapper">
+        <div id="grade">
+        <p>当前位置：<a href="#">首页</a>><a class="special" href="#">时尚风范</a></p>
+        </div>
+        <div id="m_list">
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="title" id="title">
+                <a href="#">美容</a><a href="#">发型<a href="#">美容美发</a><a href="#">数据库原理与设计</a><a href="#">时尚搭配</a><a href="#">穿衣着装</a><a href="#">美白细肤</a><a href="#">丝塔芙</a><a href="#">时尚搭配</a><a href="#">穿衣着装</a><a href="#">美白细肤</a><a href="#">丝塔芙</a>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <!--<div class="title">
+                <a href="#">美容</a><a href="#">发型<a href="#">美容美发</a><a href="#">数据库原理与设计</a><a href="#">时尚搭配</a><a href="#">穿衣着装</a><a href="#">美白细肤</a><a href="#">丝塔芙</a><a href="#">时尚搭配</a><a href="#">穿衣着装</a><a href="#">美白细肤</a><a href="#">丝塔芙</a>
+            </div>-->
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <div class="m_detail">
+                <a href="magazine.html"><img src="./image/person6.gif"/></a>
+                <h1><a href="magazine.html">这个是标题</a></h1>
+                <p><a href="magazine.html">这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，这个是内容，</a></p>
+            </div>
+            <p class="pagelist"><a href="#"><<</a><a href="#">1</a><a class="p_active" href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">...</a><a href="#">10</a><a href="#">11</a><a href="#">12</a><a href="#">>></a></p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="#">关于zer0style</a>
+            <a href="#">导师入驻</a>
+            <a href="#">最新动态</a>
+            <a href="#">报名参加</a>
+            <a href="#">网站联盟</a>
+            <a href="#">媒体报道</a>
+            <a href="#">商务报道</a>
+            <a href="#">友情链接</a>
+        </p>
+    </div> <!--end of footer-->
+    <div id="copyright">
+        <p>Copyright © 2014-2015 Zer0style有限公司 zer0style.com 保留一切权利。</p>
+    </div>
+</body>
+</html>

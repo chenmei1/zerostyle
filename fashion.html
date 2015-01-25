@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<title>zerostyle</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css" />
+<link href="./css/fashion.css" rel="stylesheet" type="text/css" />
+<script>
+window.onload = function(){
+    var oD = document.getElementById('order');
+    var oDiv1= document.getElementById("wrapper");
+    oBody=document.getElementsByTagName('body')[0];
+    var oY = getByClass(oBody,'yuyue')[0];
+    //var oQ = getByClass(oBody,'quick')[0];
+    var oDe  = document.getElementById('demand');
+    var oCl = document.getElementById('close');
+    oD.style.width=document.body.clientWidth+'px';
+    oD.style.height=document.body.clientHeight+'px';
+    oD.style.filter = 'alpha(opacity=50)';
+    oD.style.opacity = 0.5;
+    oD.style.background = '#000';
+    var oIn = getByClass(oBody,'cancel')[0];
+    oY.onclick =function(){
+         oD.style.display = 'block';
+          oDe.style.display = 'block';
+    }
+    /*oQ.onclick =function(){
+         oD.style.display = 'block';
+          oDe.style.display = 'block';
+    }*/
+    oCl.onclick =function(){
+         oD.style.display = 'none';
+         oDe.style.display = 'none';
+    }
+    oIn.onclick = function(){
+        oD.style.display = 'none';
+        oDe.style.display = 'none';
+    }
+    
+    var aClass  = getByClass(oDiv1,"title");
+    var oDiv2 = getByClass(oDiv1,"intro_sub")[0];
+    var aA = oDiv2.getElementsByTagName("a");
+    for(var i = 0;i<aA.length;i++){
+        aA[i].index = i;
+        aA[i].onclick = function(){
+            for(var i = 0;i<aA.length;i++){
+                aA[i].className = '';
+                aClass[i].style.display = 'none';
+            }
+            this.className = 'intro_active';
+            aClass[this.index].style.display='block';
+        }
+    }
+    var aReply =getByClass(oDiv1,"rep");
+    var aReply1 =getByClass(oDiv1,"reply");
+    for(var i=0;i<aReply.length;i++){
+        aReply[i].index =i;
+        aReply[i].onclick = function(){
+            if(aReply1[this.index].style.display == "block"){
+                aReply1[this.index].style.display ="none";
+            }else{
+                aReply1[this.index].style.display ="block";
+            } 
+        }
+    }
+
+    var oTo =getByClass(oDiv1,"touch")[0];
+    var aImg = oTo.getElementsByTagName('img');
+    var oInput = getByClass(oDiv1,"num")[0];
+    for(var i=0;i<aImg.length;i++){
+        aImg[i].index = i;
+        aImg[i].onclick = function(){
+            for(var i=0;i<aImg.length;i++){
+                aImg[i].src="../Public/image/not.png";
+            }
+            for(var j=0;j<=this.index;j++){
+                aImg[j].src = '../Public/image/star.png';
+            }
+            oInput.value=this.index+1;
+        }
+
+    }
+
+    var aA2 = getByClass(oDiv1,"look");
+    var aDiv3 =getByClass(oDiv1,"fells");
+    for(var i =0;i<aA2.length;i++){
+        aA2[i].index = i;
+        aA2[i].onclick = function(){
+            if(aDiv3[this.index].style.display == "block"){
+                aDiv3[this.index].style.display ="none";
+            }else{
+                aDiv3[this.index].style.display ="block";
+            }
+        }
+    }
+    
+    function getByClass(oparent,sClass){
+        var aResult=[];
+        var aEle = oparent.getElementsByTagName('*');
+        for(var i=0;i<aEle.length;i++){
+            if(aEle[i].className==sClass){
+                aResult.push(aEle[i]);
+            }
+        }
+        return aResult;
+    }
+}
+</script>
+</head>
+<body>
+    <div id="headerwrapper">
+    	<div class="black">
+    		<p><a href="#">欢迎来到Zer0style</a><a href="#">设为首页</a></p>
+    		<div id="headright"><a href="login.html">登录</a><a href="register.html">注册</a><a href="changeinfo.html">收藏夹</a><a href="teacher.html">签约导师</a><a href="aboutus.html">联系我们</a></div>
+    	</div>
+    	<div id="header">
+    		<img src="./image/logo.png" />
+    		<input type="text" id="soso" value=""/>
+    		<input type="buttton" id="search" value="搜索">
+    		<p>热门搜索&nbsp;:&nbsp;<a href="">屌丝逆袭</a><a class="active" href="">美女巨变</a><a href="">欧巴</a><a href="">暖男</a><a class="active" href="">Fashion</a><a href="">流行色</a><a href="">时尚大咖</a><a href="">国际品牌</a></p>
+    	</div><!--end of header-->
+    	<div id="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a class="activ" href="teacher.html">时尚导师</a></li>
+                <li><a href="case.html">经典案例</a></li>
+                <li><a href="magazinelist.html">时尚风范</a></li>
+            </ul>
+    	</div><!--end of nav-->
+    </div><!--end of headerwrapper-->
+    <div id="wrapper">
+        <div id="grade">
+        <p>当前位置：<a href="#">首页</a>><a href="#">时尚导师</a>><a class="special" href="#">某某</a></p>
+        </div>
+        <div id="img">
+            <div class="imglist" id="slider">
+                <ul>
+                    <li><a href="#"><img src="./image/person.png"></a></li>
+                    <li><a href="#"><img src="./image/pic1.png"></a></li>
+                    <li><a href="#"><img src="./image/pic1.png"></a></li>
+                </ul>
+            </div>
+            <script type="text/javascript" src="./js/script.js"></script>
+        </div>
+        <div class="clear"></div>
+        <div class="rank">
+            <div class="ran">
+                <div class="r_first">
+                    <span>信用等级</span>
+                    <span class="rank_pic">
+                        <img src="./image/rank1.png" />
+                    </span>
+                </div>
+                <div class="r_first">
+                    <span>成交数目</span>
+                    <span>23847</span>
+                </div>
+                 <div class="r_first">
+                    <span>累计收藏</span>
+                    <span>23847</span>
+                </div>
+            </div>
+            <div class="tab">
+                <table border="1"style="display:inline-block;border-color:#CCCCCC;" cellspacing="0">
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>周一</td>
+                        <td>周二</td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                        <td>周六</td>
+                        <td>周日</td>
+                    </tr>
+                    <tr>
+                        <td>早上</td>
+                        <td class="finish">&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>中午</td>
+                        <td class="busy">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>下午</td>
+                        <td class="busy">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>晚上</td>
+                        <td class="busy">&nbsp;</td>
+                        <td class="finish">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="introduce">
+            <div class="intro">
+                <div class="intro_sub">
+                    <a class="intro_active">时尚导师简介</a>
+                    <a>导师评语</a>
+                    <a>典型案例</a>
+                </div>
+            </div>
+            <div class="title" style="display:block;">
+                <div class="detail">
+                    <div class="left_nav">
+                            <div class="address">
+                                <h1 class="name">发型设计师：<b>张大新</b><a href="#"><img src="./image/look.gif" /></a><a href="#"><img src="./image/ju.gif" /></a></h1>
+                                <span>&nbsp;</span>
+                                <span><b>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</b>男</span>
+                                <span><b>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</b>重庆市沙坪坝区</span>
+                                <span><b>工作时长：</b>3年</span>
+                                <span><b>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></b></span>
+                                <span><b>注册时间：</b>2014年8月18日</span>
+                                <span><b>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</b><a href="javascript:void(0);">时尚</a><a href="javascript:void(0);">发型</a><a href="javascript:void(0);">时尚</a></span>
+                                <span><b>服务价格：</b>面议</span>
+                            </div>
+                            <p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...        男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件：成为时装模特必须具...男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力</p>
+                    </div>
+                    <div class="person_pic">
+                        <img src="./image/person9.gif" />
+
+                        <a href="javascript:void(0);"><img class="yuyue" src="./image/12_03.png" /></a>
+                    </div>
+                </div><!--end of detail1-->
+            </div>
+            <div class="title">
+                <div class="score">
+                    <div class="percent">
+                    </div>
+                </div> 
+                <div class="scores">
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a  class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="assess">
+                        <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <h1>
+                            <span class="tui">推荐指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                            <span>2014-08-19</span>
+                            <span>2014-08-19</span>
+                            </h1>
+                            <p>首比美容美发连锁优秀服务评分表为了大家能有一个更好的工作环境与优良的服务标准，特拟此评分表，本表以团队为主，加分与扣分都以团队为一体.</p>
+                            <span class="re"><a class="agree" href="javascript:void(0);">(0)</a><a class="rep" href="javascript:void(0);">回复(0)</a></a></span>
+                            <div class="reply">
+                                <form action="#" method="post">
+                                    <input type="text" name="contet" />
+                                    <input class="sub" type="submit" value="回复">
+                                </form>
+                            </div>
+                            <ul class="hidden_reply">
+                                <li><img class="s_pic" src="./image/person8.gif" />kilielolo:dsdsfkfdkfdjkfjdkfjkd</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="message">
+                       <div class="left_assess">
+                            <div class="person">
+                            <img src="./image/person3.gif">
+                            </div>
+                            <span class="name">likuochung</span>
+                            <span>产品设计师</span>
+                        </div>
+                        <div class="right_assess">
+                            <span class="touch">推荐指数：<img src="./image/not.png"><img src="./image/not.png"><img src="./image/not.png"><img src="./image/not.png"><img src="./image/not.png"></span>
+                            <span>2014-08-19</span>
+                        </div> 
+                        <form action="#" method="post">  
+                        <textarea class="tells" rows="12" cols="60" ></textarea>
+                        <input  class="num" type="hidden">
+                        <input type="submit" value="点评">
+                        </form>
+                        <p>请发表客观公正的评价，您的意见将成为他人的参考。谢谢！</p>
+                    </div>    
+                </div>
+            </div>
+            <div class="title">
+                <div class="change">
+                    <div class="photo">
+                        <img src="./image/before1.gif">
+                    </div>
+                    <div class="photo">
+                        <img src="./image/before1.gif">
+                    </div>
+                </div>
+                 <div class="dis_play">
+                    <div class="left_play">
+                        <div class="top">
+                            <img src="./image/person3.gif">
+                            <div class="date">
+                            <span>likuochung</span>
+                            <span>2014-08-19</span>
+                            </div>
+                        </div>
+                        <span>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：24</span>
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：产品经理</span>
+                        <span>指&nbsp;导&nbsp;导&nbsp;师：<b>张大新</b></span>
+                        <span>满&nbsp;意&nbsp;程&nbsp;度：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    </div>
+                    <div class="right_play">
+                        <p><span>魔法变身</span><a class="look" href="javascript:void(0);">查看详情>></a></p>
+                        <div class="photo">
+                        <img src="./image/before1.gif">
+                        </div>
+                        <div class="photo">
+                            <img src="./image/before1.gif">
+                        </div>
+                        <div class="fells">
+                            <div class="fell">
+                                <p>变身感受&nbsp;/////////////////////////////////////////////////////////////</p>
+                                <p class="desc">感谢各位网友的热情参与《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦
+                                </p>
+                            </div>
+                            <div class="fell">
+                                <p>导师点评&nbsp;/////////////////////////////////////////////////////////////</p>
+                                <p class="desc">感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dis_play">
+                    <div class="left_play">
+                        <div class="top">
+                            <img src="./image/person3.gif">
+                            <div class="date">
+                            <span>likuochung</span>
+                            <span>2014-08-19</span>
+                            </div>
+                        </div>
+                        <span>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：24</span>
+                        <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：产品经理</span>
+                        <span>指&nbsp;导&nbsp;导&nbsp;师：<b>张大新</b></span>
+                        <span>满&nbsp;意&nbsp;程&nbsp;度：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    </div>
+                    <div class="right_play">
+                        <p><span>魔法变身</span><a class="look" href="javascript:void(0);">查看详情>></a></p>
+                        <div class="photo">
+                        <img src="./image/after1.gif">
+                        </div>
+                        <div class="photo">
+                            <img src="./image/before1.gif">
+                        </div>
+                        <div class="fells">
+                            <div class="fell">
+                                <p>变身感受&nbsp;/////////////////////////////////////////////////////////////</p>
+                                <p class="desc">感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 
+                                </p>
+                            </div>
+                            <div class="fell">
+                                <p>导师点评&nbsp;/////////////////////////////////////////////////////////////</p>
+                                <p class="desc">感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 感谢各位网友的热情参与，《屌丝大翻身》第一季IT宅男变型男，以及第一季《腐女大翻身》的女汉子变女神已经顺利结束啦。现在正在进行的是《屌丝大翻身》第二季疯狂游戏男变阳光帅咖~~这是第一期哦，还有第二第三期，欢迎大家 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--end of wrapper-->
+    <div id="footer">
+        <p>
+            <a href="#">关于zer0style</a>
+            <a href="#">导师入驻</a>
+            <a href="#">最新动态</a>
+            <a href="#">报名参加</a>
+            <a href="#">网站联盟</a>
+            <a href="#">媒体报道</a>
+            <a href="#">商务报道</a>
+            <a href="#">友情链接</a>
+        </p>
+    </div> <!--end of footer-->
+    <div id="copyright">
+        <p>Copyright © 2014-2015 Zer0style有限公司 zer0style.com 保留一切权利。</p>
+    </div>
+    <div id="order">
+    </div>
+     <div id="demand" style="background:#fff;z-indent:12px;opacity:1;">
+        <h1><b>导师预约</b><img id="close" src="./image/close.gif"></h1>
+        <form action="#" method="post">
+        <p><span>导师类型：</span><select style="width:140px;"><option value="1" >用户</option><option value="2" >导师</option></select><span>目标导师：</span><input onclick="this.value=''" type="text" value="张大新" /></p>
+        <p><span>预约时间：</span><input type="text" onclick="this.value=''" value="2014-08-19"><select style="width:140px;"><option value="1" >早上</option><option value="2" >中午</option><option value="2" >下午</option><option value="2" >晚上</option></select></p>
+        <p><span>我的姓名：</span><input type="text" value=""></p>
+        <p><span>手&nbsp;&nbsp;&nbsp;&nbsp;机：</span><input type="text" value=""><span>或固定电话：</span><input type="text" value="" /></p>
+        <p class="sp"><input class="config" type="button" value="提交"/><input class="cancel" type="button" value="取消"/></p>
+    </form>
+    </div>
+</body>
+</html>

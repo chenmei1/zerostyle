@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<title>zerostyle</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css" />
+<link href="./css/index.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/datalazyload.js"></script>
+<script>
+$(function(){
+        showScroll();
+        function showScroll(){
+            $(window).scroll( function() { 
+                var scrollValue=$(window).scrollTop();
+                scrollValue > 100 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+            } );    
+            $('#scroll').click(function(){
+                $("html,body").animate({scrollTop:0},200);  
+            }); 
+        }
+
+
+        var a=$("#list");
+        a.wraplazyload(a.html());
+        a.datalazyload({dataItem: '.column',loadType: 'item',effect: 'fadeIn',effectTime: 1000})
+    });
+</script>
+<script>
+/*window.onscroll = function(){
+    var oDiv = document.getElementById('list');
+    var oDiv1 = document.getElementById('home_nav');
+   // alert(oDiv.offsetTop);
+    if(oDiv.offsetTop <= 0){
+        oDiv1.style.display = 'block';
+    }
+}*/
+window.onscroll = function () { 
+    var oDiv = document.getElementById("home_nav");
+if (document.documentElement.scrollTop + document.body.scrollTop > 300) { 
+    oDiv.style.display = "block"; 
+} 
+else { 
+     oDiv.style.display = "none"; 
+} 
+/*var sTop =window.pageYOffset  || document.documentElement.scrollTop || document.body.scrollTop||0;
+oDiv.style.top=sTop+200+"px";*/
+} 
+</script>
+</head>
+<body>
+    <div id="headerwrapper">
+    	<div class="black">
+    		<p><a href="#">欢迎来到Zer0style</a><a href="#">设为首页</a></p>
+    		<div id="headright"><a href="login.html">登录</a><a href="register.html">注册</a><a href="changeinfo.html">收藏夹</a><a href="teacher.html">签约导师</a><a href="aboutus.html">联系我们</a></div>
+        </div>
+    	<div id="header">
+    		<img src="./image/logo.png" />
+    		<input type="text" id="soso" value=""/>
+    		<input type="buttton" id="search" value="搜索">
+    		<p>热门搜索&nbsp;:&nbsp;<a href="">屌丝逆袭</a><a class="active" href="">美女巨变</a><a href="">欧巴</a><a href="">暖男</a><a class="active" href="">Fashion</a><a href="">流行色</a><a href="">时尚大咖</a><a href="">国际品牌</a></p>
+    	</div><!--end of header-->
+    	<div id="nav">
+            <ul>
+                <li><a class="activ" href="index.html">首页</a></li>
+                <li><a href="teacher.html">时尚导师</a></li>
+                <li><a href="case.html">经典案例</a></li>
+                <li><a href="magazinelist.html">时尚风范</a></li>
+            </ul>
+    	</div><!--end of nav-->
+        <div class="imglist" id="slider">
+            <ul>
+                <li><a href="#"><img src="./image/pic1.png"></a></li>
+                <li><a href="#"><img src="./image/pic1.png"></a></li>
+                <li><a href="#"><img src="./image/pic1.png"></a></li>
+                <li><a href="#"><img src="./image/pic1.png"></a></li>
+            </ul>
+            <!--<ol class="test">
+                <li class="pactive">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>-->
+        </div>
+        <script type="text/javascript" src="./js/script.js"></script>
+    </div><!--end of headerwrapper-->
+    <div id="main">
+        <div id="tab">
+            <a href="teacher.html"><img class="yuyue" src="./image/yuyue.gif"/></a>
+            <a href="teacher.html"><img class="quick" src="./image/quick.gif"/></a>
+            <p>签约<span>最优</span>时尚导师,一对一服务，带你从<span>零</span>开始，发现<span>最美丽</span>的自己！</p>
+        </div>
+        <div id="list">
+            <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+               <div class="msg">
+                <span>时尚杂志社</span>
+                <span>Fashion Magazine</span>
+                <p>01</p>
+                <img src="./image/pointer.gif" />
+               </div>
+               <div class="mgz">
+                <a href="fashion.html"><img src="./image/person1.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+                <div class="mgz">
+                <a href="fashion.html"><img src="./image/person2.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+                <div class="mgz">
+                <a href="fashion.html"><img src="./image/person1.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+            </div>
+            <div class="column">
+               <div class="smsg">
+                <span>E文最时尚</span>
+                <span>A piece of fashion</span>
+                <p>02</p>
+                <img src="./image/pointer.gif" />
+               </div>
+               <div class="mg">
+                    <div class="mgfirst">
+                        <a href="magazine.html"><img src="./image/person3.png"></a>
+                        <a href="magazine.html"><span>宝格丽突出全新</span></a>
+                        <a href="magazine.html"><span>Diagono Ultranero计时腕表</span></a>
+                        <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。具有三个小表盘的Diagono计时表以其卓越的性能和精准性彰显佩戴者的品位Diagono计时表以其卓越的性能和精准性彰显佩戴者的品位......More
+                        </p></a>
+                    </div>
+                    <div class="mgsed">
+                        <a href="magazine.html"><img src="./image/person3.png"></a>
+                        <a href="magazine.html"><span>宝格丽突出全新</span></a>
+                        <a href="magazine.html"><span>Diagono Ultranero计时腕表</span></a>
+                        <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。
+                        </p></a>
+                    </div>
+               </div>
+                <div class="mgthird">
+                <a href="magazine.html"><img src="./image/person3.png"></a>
+                 <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。
+                        </p></a>
+                </div>
+            </div>
+           <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <a href="fashion.html"><img class="big_pic" src="./image/person.png"/></a>
+                <div class="content">
+                    <a href="fashion.html"><h1>刘大新</h1></a>
+                    <span>职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：资深发型设计师</span>
+                    <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：重庆市沙坪坝区</span>
+                    <span>人气指数：<img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"><img src="./image/star.png"></span>
+                    <div class="cont">
+                    <a href="fashion.html"><p> 男模是在体型、相貌、气质、文化基础、职业感觉、展示能力等方面具有一定条件，并有良好的对服装设计、制作与面料、配件以及音乐、舞台灯光等具有一定的领悟能力，这样的一群工作在T型台上的工作者。模特的所需要具备的条件： 成为时装模特必须具...</p></a>
+                    <a href="fashion.html"><img class="me" src="./image/me.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+               <div class="msg">
+                <span>时尚杂志社</span>
+                <span>Fashion Magazine</span>
+                <p>01</p>
+                <img src="./image/pointer.gif" />
+               </div>
+               <div class="mgz">
+                <a href="fashion.html"><img src="./image/person1.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+                <div class="mgz">
+                <a href="fashion.html"><img src="./image/person2.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+                <div class="mgz">
+                <a href="fashion.html"><img src="./image/person1.png"></a>
+                    <a href="fashion.html"><span class="title">《瑞丽服饰美容》</span></a>
+                    <a href="fashion.html"><span>关注女性魅力从未如此简单
+                    </span></a>
+               </div> 
+            </div>
+            <div class="column">
+               <div class="smsg">
+                <span>E文最时尚</span>
+                <span>A piece of fashion</span>
+                <p>02</p>
+                <img src="./image/pointer.gif" />
+               </div>
+               <div class="mg">
+                    <div class="mgfirst">
+                        <a href="magazine.html"><img src="./image/person3.png"></a>
+                        <a href="magazine.html"><span>宝格丽突出全新</span></a>
+                        <a href="magazine.html"><span>Diagono Ultranero计时腕表</span></a>
+                        <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。具有三个小表盘的Diagono计时表以其卓越的性能和精准性彰显佩戴者的品位Diagono计时表以其卓越的性能和精准性彰显佩戴者的品位......More
+                        </p></a>
+                    </div>
+                    <div class="mgsed">
+                        <a href="magazine.html"><img src="./image/person3.png"></a>
+                        <a href="magazine.html"><span>宝格丽突出全新</span></a>
+                        <a href="magazine.html"><span>Diagono Ultranero计时腕表</span></a>
+                        <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。
+                        </p></a>
+                    </div>
+               </div>
+                <div class="mgthird">
+                <a href="magazine.html"><img src="./image/person3.png"></a>
+                 <a href="magazine.html"><p>全新BVLGARI宝格丽Diagono Ultranero腕表为满足高水准的日常佩戴需求而设计，性能出众又不失优雅精致。
+                        </p></a>
+                </div>
+            </div>
+        </div>
+        <p id="loading" style="display:none;">加载......</p>
+    </div><!--end of main-->
+    <div id="footer">
+        <p>
+            <a href="#">关于zer0style</a>
+            <a href="#">导师入驻</a>
+            <a href="#">最新动态</a>
+            <a href="#">报名参加</a>
+            <a href="#">网站联盟</a>
+            <a href="#">媒体报道</a>
+            <a href="#">商务报道</a>
+            <a href="#">友情链接</a>
+        </p>
+    </div> <!--end of footer-->
+    <div id="copyright">
+        <p>Copyright © 2014-2015 Zer0style有限公司 zer0style.com 保留一切权利。</p>
+    </div>
+    <div id="home_nav">
+        <ul>
+            <li><a class="nav_ico1" href="javascript:void(0);">马上预约</a></li>
+            <li><a class="nav_ico2" href="javascript:void(0);">人气导师</a></li>
+            <li><a class="nav_ico3" href="javascript:void(0);">蜕变故事</a></li>
+            <li><a class="nav_ico4" href="javascript:void(0);">我的收藏</a></li>
+            <li><a class="nav_ico5" href="javascript:void(0);">最近浏览</a></li>
+            <li><a class="scroll" id="scroll" href="javascript:void(0);">返回顶部</a></li>
+        </ul>
+    </div>
+    <div id="rightline">
+        <p>
+            <a href="#">登陆</a>
+            <a href="#">注册</a>
+            <a href="#">收藏夹</a>
+            <a href="#">签约导师</a>
+            <a href="#">联系我们</a>
+        </p>
+    </div>
+    <div id="order">
+    </div>
+     <div id="demand" style="background:#fff;z-indent:12px;opacity:1;">
+        <h1>导师预约 <img id="close" src="./image/close.gif"></h1>
+        <form action="#" method="post">
+        <p><span>导师类型：</span><input type="text" value="--造型师--"><span>目标导师：</span><input type="text" value="--张大新--" /></p>
+        <p><span>导师地址：</span><input type="text" value="--造型师--"><input type="text" value="--造型师--"><input type="text" value="--张大新--" /></p>
+        <p><span>预约时间：</span><input type="text" value="--造型师--"><input type="text" value="--张大新--" /></p>
+        <p><span>我的姓名：</span><input type="text" value=""></p>
+        <p><span>居住地址：</span><input type="text" value="--造型师--"><input type="text" value="--张大新--" /><input type="text" value="--张大新--" /></p>
+        <p><span>手&nbsp;&nbsp;&nbsp;&nbsp;机：</span><input type="text" value=""><span>或固定电话：</span><input type="text" value="" /></p>
+        <p class="sp"><input class="config" type="button" value="提交"/><input class="cancel" type="button" value="取消"/></p>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#headerwrapper{min-height:173px;}
+#wrapper{width:982px;min-height:541px;margin:0 auto;margin-top:10px;overflow:hidden;zoom:1;margin-bottom:20px;}
+#grade{width:982px;height:40px;background:#fff;margin:0 auto;}
+#grade p{width:300px;height:40px;line-height:40px;float:left;margin-left:42px;color:#A9A9A9;font-family:'宋体';font-size:14px;}
+#grade a{color:#A9A9A9;}
+#grade .special{color:#F7286C;}
+
+#helpcenter{min-height:1000px;width:982px;margin:20px auto;float:left;overflow:auto}
+
+#helpcenter_left{min-height:541px;width:154px;margin-left:0px;background:white;float:left;}
+.border_left{border-left:3px solid #F7286C;}
+.color1{color:#F7286C;}
+#helpcenter_left p{margin-top:5px;color:#333333;text-align:center;}
+#helpcenter_left p a{font-size:14px;font-weight:600;font-family:'黑体';color:#333333}
+#helpcenter_left li{margin-top:10px;}
+#helpcenter_left li a{font-size:12px;color:#666666;font-weight:100;font-family:'黑体';text-align:right;margin-left:58px;}
+
+#helpcenter_right{min-height:1000px;width:808px;margin-left:20px;float:left;background:white;}
+
+.newuser_tip{width:515px;overflow:auto;float:left;margin-left:25px;margin-top:20px;}
+.newuser_tip img{margin:0px 0px;float:left;margin-top:0px;margin-left:0px}
+.newuser_tip p{width:350px;float:left;font-size:12px;font-family:'黑体';color:#333333;line-height:18px;text-indent:2em;margin-top:5px;margin-left:0px;}
+
+#commonproblem_background{width:808px;float:left;margin-left:0px;margin-top:0px;background:#F3F3F3;}
+.commonproblem{width:808px;float:left;margin-left:0px;margin-top:0px;margin-bottom:10px;background:white}
+.commonproblem_choose{background:#ff77a4;color:white;}
+.commonproblem_title{width:803px;height:37px;line-height:37px;float:left;margin-left:0px;margin-top:0px;padding-left:5px;font-size:14px;font-family:'黑体';}
+.commonproblem_answer{width:768px;float:left;padding:0px 20px;font-size:12px;font-family:'黑体';color:#333333;line-height:24px;background:#F3F3F3;}

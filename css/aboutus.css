@@ -1,0 +1,10 @@
+#headerwrapper{min-height:173px;}
+#wrapper{width:982px;min-height:600px;margin:0 auto;margin-top:10px;}
+#grade{width:982px;height:40px;background:#fff;float:left;}
+#grade p{width:300px;height:40px;line-height:40px;float:left;margin-left:42px;color:#A9A9A9;font-family:'宋体';font-size:14px;}
+#grade a{color:#A9A9A9;}
+#grade .special{color:#F7286C;}
+
+#content{width:940px;min-height:433px;padding:20px;background:#fff;margin:0 auto;float:left;margin-top:10px;}
+#content h1{font-size:24px;font-family:'微软雅黑';color:#333333;}
+#content p{margin-top:40px;font-size:12px;font-family:'微软雅黑';color:#656565;text-indent:2em;}

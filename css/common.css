@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,p,h1,h2,h3,h4,h5,form,input{margin:0;padding:0;font-family: Arial, Sans-Serif;}
+input,button{border:none;background:none;outline:none;}
+a{text-decoration:none;}
+ol,ul{list-style:none;}
+img{border:0;}
+.clear{clear:both;}
+/*
+*头部
+ */
+body{background:#F4F4F4;}
+#headerwrapper{width:1349px;margin:0 auto;min-height:573px;}
+
+.black{width:982px;margin:0 auto;min-height:40px;line-height:40px;}
+.black p{width:250px;float:left;}
+.black a{display:block;float:left;color:#4C4C4C;margin-right:45px;font-family:'微软雅黑';font-size:12px;}
+.black #headright{width:384px;min-height:40px;float:right;}
+.black #headright a{margin:0 0 0 40px;}
+
+#header{width:1349px;margin:0 auto;height:95px;background:#FFF;position:relative;}
+#header img{margin:0 0 0 222px;}
+#header #soso{width:446px;height:34px;padding:4px 0 4px 0;font-size:18px;position:absolute;right:312px;top:18px;border:none;border:4px solid #F7286C;}
+#header #search{width:88px;height:50px;border:none;line-height:50px;background:#F7286C;position:absolute;right:224px;top:18px;cursor:pointer;font-size:24px;font-family:'微软雅黑';color:#fff;text-align:center;}
+#header p{width:560px;*width:570px;height:20px;line-height:20px;position:absolute;right:204px;*right:200px;top:72px;font-size:12px;color:#A9A9A9;font-family:'微软雅黑';}
+#header a{font-family:'微软雅黑';font-size:12px;margin-right:22px;color:#A9A9A9;}
+#header .active{color:#F7286C;}
+
+#nav{width:1349px;margin:0 auto;height:38px;background:#F7286C;}
+#nav ul{width:900px;margin-left:222px;}
+#nav li{float:left;margin-right:2px;}
+#nav a{width:138px;display:block;height:36px;line-height:36px;float:left;font-size:14px;color:#fff;text-align:center;margin-top:1px;font-family:'微软雅黑';}
+#nav a:hover{background:#FFF;color:#F7286C;}
+#nav .activ{background:#FFF;color:#F7286C;}
+/*
+*尾部
+ */
+#footer{width:1349px;margin:0 auto;height:38px;background:#2C2C2C;float:left;}
+#footer p{text-align:center;height:38px;line-height:38px;}
+#footer a{text-align:center;font-size:12px;font-family:'微软雅黑';color:#fff;padding:0 22px 0 22px;border-left:1px solid #fff;}
+#footer a:first-child{border:none;}
+
+#copyright{width:1349px;margin: 0 auto;height:80px;background:#E9E9E9;float:left;}
+#copyright p{text-align:center;height:80px;line-height:80px;font-size:12px;font-family:'微软雅黑';}
+

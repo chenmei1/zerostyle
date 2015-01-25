@@ -1,0 +1,30 @@
+#headerwrapper{min-height:173px;}
+#wrapper{width:982px;min-height:700px;margin:0 auto;margin-top:10px;}
+#grade{width:982px;height:40px;background:#fff;float:left;}
+#grade p{width:300px;height:40px;line-height:40px;float:left;margin-left:42px;color:#A9A9A9;font-family:'宋体';font-size:14px;}
+#grade a{color:#A9A9A9;}
+#grade .special{color:#F7286C;}
+
+#main{width:982px;min-height:400px;float:left;padding-bottom:20px;background:#fff;margin-top:15px;margin-bottom:20px;}
+#main tr{text-align:center;}
+#main td{font-size:18px;}
+#main input{height:18px;}
+#main table{margin-top:30px;}
+.Validform_checktip{margin-left:176px;}
+#main .info{width:200px;}
+#main select{height:30px;}
+#main .teacher{display:none;}
+
+#main #center{width:226px;height:150px;margin:0 auto;margin-top:60px;}
+#center h1{width:226px;height:50px;font-size:42px;color:#CB0D2C;text-align:left;margin-bottom:12px;}
+#center h1 img{float:left;margin-right:4px;}
+#center span{display:block;font-size:14px;font-family:'黑体';color:#333333;margin-top:7px;text-align:center;}
+#center a{color:#CB0E2C;padding:0 6px 0 6px;font-size:14px;font-family:'黑体';text-decoration: none;}
+#center p a:first-child{border-right:1px solid #CB0E2C;}
+#center p{text-align:center;margin-top:6px;}
+
+.re_box{width:900px;min-height:700px;margin:0 auto;margin-top:20px;border:1px solid #ccc;}
+.re_box p{margin-left:30px;}
+.re_box .s_active{width:100px;height:26px;line-height:26px;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:2px solid #F7286C;text-align:center;margin-top:-1px;background:#fff;border-top:none;color:#656565;display:inline-block;}
+.re_box span{width:100px;height:26px;line-height:26px;font-size:14px;font-family:'微软雅黑';text-align:center;color:#656565;display:block;float:left;cursor:pointer;}
+.re_box .check{margin-left:0px;}

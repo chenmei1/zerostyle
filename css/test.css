@@ -1,0 +1,6 @@
+#headerwrapper{min-height:173px;}
+#wrapper{width:982px;min-height:1200px;margin:0 auto;margin-top:10px;overflow:hidden;zoom:1;margin-bottom:20px;}
+#grade{width:982px;height:40px;background:#fff;margin:0 auto;}
+#grade p{width:300px;height:40px;line-height:40px;float:left;margin-left:42px;color:#A9A9A9;font-family:'宋体';font-size:14px;}
+#grade a{color:#A9A9A9;}
+#grade .special{color:#F7286C;}

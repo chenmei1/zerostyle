@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<title>zerostyle</title>
+<link href="./css/common.css" rel="stylesheet" type="text/css" />
+<link href="./css/register.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+<link href="./css/demo.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+td{line-height:38px;}
+.registerform{
+    width:800px;
+    margin:90px 0 0 34px;
+}
+.registerform .inputxt,
+.registerform textarea{
+    padding:6px;
+    width:245px;
+}
+.registerform .inputxts{border: 1px solid #a5aeb6;width:155px;padding:6px;height:30px;}
+#main .registerform .inputxtss{width:205px;height:30px;margin-left:10px;}
+.Validform_checktip{display:none; line-height:38px; height:38px;width:300px;}
+.Validform_checktips{display:none; line-height:38px; height:38px;width:300px;}
+.Validform_wrong,
+.Validform_right,
+.Validform_loading{display:block;}
+.Validform_wrong{
+    width:110px;
+}
+#main .agree{height:10px;line-height:10px;}
+#main .submit{width:175px;height:30px;line-height:30px;background:#F6276B;font-size:14px;color:#fff;font-family:'宋体';cursor:pointer;border:none;}
+.info{
+    margin-left:8px; 
+    border:1px solid #ccc; 
+    padding:8px 20px 8px 10px; 
+    color:#666; 
+    float:left;
+    font-size:14px;
+    position:relative;
+    display:none;
+    line-height:20px;
+}
+#main .check{width:300px;height:30px;line-height:30px;}
+.check a{width:150px;}
+.infos{
+    margin-left:8px; 
+    border:1px solid #ccc; 
+    padding:8px 20px 8px 10px; 
+    color:#666; 
+    float:left;
+    position:relative;
+    display:none;
+    line-height:20px;
+}
+.dec {
+    top: 9px;
+    display: block;
+    height: 17px;
+    overflow: hidden;
+    position: absolute;
+    left: -8px;
+    width: 8px;
+}
+.dec s {
+    font-family: simsun;
+    font-size: 16px;
+    height: 19px;
+    left: 0;
+    line-height: 21px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 17px;
+}
+.dec .dec1 {
+    color: #ccc;
+}
+.dec .dec2 {
+    color: #fff;
+    left: 1px;
+}
+</style>
+<script>
+function getByClass(oparent,sClass){
+    var aResult=[];
+    var aEle = oparent.getElementsByTagName('*');
+    for(var i=0;i<aEle.length;i++){
+        if(aEle[i].className==sClass){
+            aResult.push(aEle[i]);
+        }
+    }
+    return aResult;
+}
+
+window.onload = function(){
+    var oDiv = document.getElementById('main');
+    var oP = oDiv.getElementsByTagName('p')[0];
+    var aSpan = oP.getElementsByTagName('span');
+    var aFrom = getByClass(oDiv,'registerform');
+    for(var i=0;i<aSpan.length;i++){
+        aSpan[i].index = i;
+        aSpan[i].onclick =function(){
+            for(var j =0;j<aSpan.length;j++){
+                aSpan[j].className ='';
+                aFrom[j].style.display = 'none';
+            }
+            this.className = 's_active';
+            aFrom[this.index].style.display='block';
+        }
+    }
+   /* var oDec1 = document.getElementById('se');
+    var oDec2 = getByClass(oDiv,"de1")[0];
+    var aTr = getByClass(oDiv,"teacher");
+    oDec1.onchange= function(){
+        //alert(document.all.se.value);
+        if(oDec1.value ==1){
+            for(var i =0;i<aTr.length;i++){
+                aTr[i].style.display = 'none';
+            }
+        }else{
+            for(var i =0;i<aTr.length;i++){
+                aTr[i].style.display = 'block';
+            }
+        }
+    }*/
+}
+</script>
+</head>
+<body>
+    <div id="headerwrapper">
+    	<div class="black">
+    		<p><a href="#">欢迎来到Zer0style</a><a href="#">设为首页</a></p>
+    		<div id="headright"><a href="login.html">登录</a><a href="register.html">注册</a><a href="changeinfo.html">收藏夹</a><a href="teacher.html">签约导师</a><a href="aboutus.html">联系我们</a></div>
+    	</div>
+    	<div id="header">
+    		<img src="./image/logo.png" />
+    		<input type="text" id="soso" value=""/>
+    		<input type="buttton" id="search" value="搜索">
+    		<p>热门搜索&nbsp;:&nbsp;<a href="">屌丝逆袭</a><a class="active" href="">美女巨变</a><a href="">欧巴</a><a href="">暖男</a><a class="active" href="">Fashion</a><a href="">流行色</a><a href="">时尚大咖</a><a href="">国际品牌</a></p>
+    	</div><!--end of header-->
+    	<div id="nav">
+            <ul>
+                <li><a class="activ" href="index.html">首页</a></li>
+                <li><a  href="teacher.html">时尚导师</a></li>
+                <li><a href="case.html">经典案例</a></li>
+                <li><a href="magazinelist.html">时尚风范</a></li>
+            </ul>
+    	</div><!--end of nav-->
+    </div><!--end of headerwrapper-->
+    <div id="wrapper">
+        <div id="grade">
+        <p>当前位置：<a href="#">首页</a>><a class="special" href="#">注册</a></p>
+        </div>
+        <div id="main">
+            <div class="re_box">
+                <p><span class="s_active">用户注册</span><span>导师注册</span></p>
+                <form class="registerform" method="post" action="demo/ajax_post.php">
+                    <table style="table-layout:fixed; width:300px;margin:0 auto;margin-top:40px">
+                        <tr>
+                            <td style="width:100px;">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</td>
+                            <td style="width:266px;"><input type="text" value="" name="name" class="inputxt" datatype="e" nullmsg="请输入您的邮箱！" errormsg="请输入正确的邮箱！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入正确的邮箱<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">用&nbsp;&nbsp;户&nbsp;名：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxt" datatype="s6-18" nullmsg="请输入您的昵称！" errormsg="至少6-18个字符！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">至少-18个字符<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+                            <td style="width:210px;">
+                                <input type="password" value="" name="password" class="inputxt" plugin="passwordStrength"  datatype="*6-18" nullmsg="请输入密码！" errormsg="密码至少6个字符,最多18个字符！" />
+                            </td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="passwordStrength" style="display:none;"><b>密码强度：</b> <span>弱</span><span>中</span><span class="last">强</span></div>
+                                <div class="info">密码至少6个字符,最多18个字符<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>确认密码：</td>
+                            <td><input type="password" value="" name="repassword" class="inputxt" recheck="password"  datatype="*6-18" nullmsg="请确认密码！" errormsg="两次输入的密码不一致！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请确认您的密码<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>真实姓名：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxt" datatype="name" nullmsg="请输入您的真实姓名！" errormsg="请输入您的真实姓名！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您的真实姓名<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手机电话：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxts" datatype="m" nullmsg="请输入您的电话！" errormsg="请输入您正确的电话" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您正确的电话<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>验&nbsp;&nbsp;证&nbsp;码：</td>
+                            <td style="width:205px;"><input type="text" value="" name="name" class="inputxts" nullmsg="请填写职业！"  /></td>
+                            <td><div class="Validform_checktip">请填写职业</div></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p class="check"><input  class="agree" type="checkbox" name="vehicle" value="" />&nbsp;同意<a href="#">《服务协议》</a></td></p>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input  class="submit" type="submit" value="提 交"/> 
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <form class="registerform" style="display:none;" method="post" action="demo/ajax_post.php">
+                    <table style="table-layout:fixed; width:300px;margin:0 auto;margin-top:40px">
+                        <tr>
+                            <td style="width:100px;">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</td>
+                            <td style="width:266px;"><input type="text" value="" name="name" class="inputxt" datatype="e" nullmsg="请输入您的邮箱！" errormsg="请输入正确的邮箱！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入正确的邮箱<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">用&nbsp;&nbsp;户&nbsp;名：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxt" datatype="s6-18" nullmsg="请输入您的昵称！" errormsg="至少6-18个字符！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">至少-18个字符<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+                            <td style="width:210px;">
+                                <input type="password" value="" name="password" class="inputxt" plugin="passwordStrength"  datatype="*6-18" nullmsg="请输入密码！" errormsg="密码至少6个字符,最多18个字符！" />
+                            </td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="passwordStrength" style="display:none;"><b>密码强度：</b> <span>弱</span><span>中</span><span class="last">强</span></div>
+                                <div class="info">密码至少6个字符,最多18个字符<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>确认密码：</td>
+                            <td><input type="password" value="" name="repassword" class="inputxt" recheck="password"  datatype="*6-18" nullmsg="请确认密码！" errormsg="两次输入的密码不一致！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请确认您的密码<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>真实姓名：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxt" datatype="name" nullmsg="请输入您的真实姓名！" errormsg="请输入您的真实姓名！" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您的真实姓名<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手机电话：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxts" datatype="m" nullmsg="请输入您的电话！" errormsg="请输入您正确的电话" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您正确的电话<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">身&nbsp;&nbsp;份&nbsp;证：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxts" datatype="s6-18" nullmsg="请输入您的身份证！" errormsg="请输入您的正确的身份证" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您正确的身份证<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</td>
+                            <td style="width:280px;"><input type="text" value="" name="name" class="inputxts" nullmsg="请输入您的职业！" errormsg="请输入您的正确的职业" /></td>
+                            <td>
+                                <div class="Validform_checktip"></div>
+                                <div class="info">请输入您正确的身份证<span class="dec"><s class="dec1">&#9670;</s><s class="dec2">&#9670;</s></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:70px;">简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：</td>
+                            <td style="width:280px;"><input type="file" value="" name="name" class="inputxtss" /></td>
+                            <td><div class="Validform_checktip">请填写职业</div></td>
+                        </tr>
+                        <tr>
+                            <td>验&nbsp;&nbsp;证&nbsp;码：</td>
+                            <td style="width:205px;"><input type="text" value="" name="name" class="inputxts" nullmsg="请填写职业！"  /></td>
+                            <td><div class="Validform_checktip">请填写职业</div></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p class="check"><input  class="agree" type="checkbox" name="vehicle" value="" />&nbsp;同意<a href="#">《服务协议》</a></td></p>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input  class="submit" type="submit" value="提 交"/> 
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+            <a href="#">关于zer0style</a>
+            <a href="#">导师入驻</a>
+            <a href="#">最新动态</a>
+            <a href="#">报名参加</a>
+            <a href="#">网站联盟</a>
+            <a href="#">媒体报道</a>
+            <a href="#">商务报道</a>
+            <a href="#">友情链接</a>
+        </p>
+    </div> <!--end of footer-->
+    <div id="copyright">
+        <p>Copyright © 2014-2015 Zer0style有限公司 zer0style.com 保留一切权利。</p>
+    </div>
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/Validform_v5.3.2.js"></script>
+<script type="text/javascript">
+$(function(){
+    //$(".registerform").Validform();  //就这一行代码！;
+    
+    var getInfoObj=function(){
+            return  $(this).parents("td").next().find(".info");
+        }
+    
+    $("[datatype]").focusin(function(){
+        if(this.timeout){clearTimeout(this.timeout);}
+        var infoObj=getInfoObj.call(this);
+        if(infoObj.siblings(".Validform_right").length!=0){
+            return; 
+        }
+        infoObj.show().siblings().hide();
+        
+    }).focusout(function(){
+        var infoObj=getInfoObj.call(this);
+        this.timeout=setTimeout(function(){
+            infoObj.hide().siblings(".Validform_wrong,.Validform_loading").show();
+        },0);
+        
+    });
+    
+    $(".registerform").Validform({
+        tiptype:2,
+        usePlugin:{
+            passwordstrength:{
+                minLen:6,
+                maxLen:18,
+                trigger:function(obj,error){
+                    if(error){
+                        obj.parent().next().find(".passwordStrength").hide().siblings(".info").show();
+                    }else{
+                        obj.removeClass("Validform_error").parent().next().find(".passwordStrength").show().siblings().hide();  
+                    }
+                }
+            }
+        }
+    });
+})
+</script>
+</body>
+</html>

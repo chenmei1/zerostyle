@@ -1,0 +1,16 @@
+#headerwrapper{min-height:173px;}
+#wrapper{width:982px;min-height:500px;margin:0 auto;margin-top:10px;}
+#grade{width:982px;height:40px;background:#fff;margin:0 auto;margin-top:10px;}
+#grade p{width:300px;height:40px;line-height:40px;float:left;margin-left:42px;color:#A9A9A9;font-family:'宋体';font-size:14px;}
+#grade a{color:#A9A9A9;}
+#grade .special{color:#F7286C;}
+
+#login_form{width:380px;min-height:400px;margin:0 auto;margin-top:30px;}
+#login_form img{border:none;margin-left:160px;}
+#login_form span{width:400px;display:block;font-size:18px;color:#333333;margin-top:30px;}
+#login_form input{border: 1px solid #a5aeb6;width:290px;height:30px;line-height:23px;background:#fff;font-size:14px;letter-spacing:1px;padding-left:5px;}
+#login_form .submit{width:96px;height:30px;line-height:30px;border:none;float:left;background:#F6276B;font-size:14px;color:#fff;font-family:'宋体';cursor:pointer;margin:30px 0 0 70px;}
+#login_form p{float:left;width:152px;height:30px;margin:36px 0 0 16px;}
+#login_form p a{font-size:14px;color:#999999;padding:0 5px 0 5px;}
+#login_form p a:first-child{border-right:1px solid #999999;}
+
